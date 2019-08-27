@@ -1,0 +1,22 @@
+.prod-img{
+    width: 250px;
+    height: 250px;
+}
+
+ul.prod-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+li{
+    margin: 10px;
+    border: 1px solid lightgray;
+}
+
+.prod-name{
+    text-align: center;
+}

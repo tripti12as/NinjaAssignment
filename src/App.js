@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router, NavLink, Link, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import Men from './Components/men';
+import Women from './Components/women';
+import HomeLiving from './Components/homeliving';
+import MyCart from './Components/mycart';
+
+const Home = () => <h3>Welcome to Online Shopping!</h3>;
+
+class App extends React.Component {
+
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <div>
+
+        <h1 className="header">Online Shopping Portal</h1>
+        <NavLinks></NavLinks>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/men" component={Men} />
+          <Route path="/women" component={Women} />
+          <Route path="/homeliving" component={HomeLiving} />
+          <Route path="/mycart" component={MyCart} />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+class NavLinks extends React.Component {
+  render() {
+    return (
+      <div className="links">
+        <NavLink exact to="/" className="link" activeClassName="active">HOME</NavLink>
+        <NavLink to="/men" className="link">MEN</NavLink>
+        <NavLink to="/women" className="link">WOMEN</NavLink>
+        <NavLink to="/homeliving" className="link">HOME & LIVING</NavLink>
+        <NavLink to="/mycart" className="link">My Cart</NavLink>
+      </div>
+    );
+  }
 }
 
 export default App;
