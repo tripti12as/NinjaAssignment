@@ -25,7 +25,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/men" component={Men} />
-          <Route path="/women" component={Women} />
+          <Route path="/products/women" component={Women} />
           <Route path="/homeliving" component={HomeLiving} />
           <Route path="/mycart" component={MyCart} />
         </Switch>
@@ -40,7 +40,7 @@ class NavLinks extends React.Component {
       <div className="links">
         <NavLink exact to="/" className="link" activeClassName="active">HOME</NavLink>
         <NavLink to="/men" className="link">MEN</NavLink>
-        <NavLink to="/women" className="link">WOMEN</NavLink>
+        <NavLink to="/products/women" className="link">WOMEN</NavLink>
         <NavLink to="/homeliving" className="link">HOME & LIVING</NavLink>
         <NavLink to="/mycart" className="link">My Cart</NavLink>
       </div>
