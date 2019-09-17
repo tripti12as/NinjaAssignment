@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, NavLink, Link, Route, Switch } from 'react-router-dom';
+import { Router, Link, Route, Switch } from 'react-router-dom';
 
 class ProductDetails extends React.Component {
 
